@@ -1,0 +1,1008 @@
+
+    .container {
+    position: relative;
+  }
+
+  .card{
+    border-radius: 12px!important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02)!important;
+
+  }
+
+  .otp_input{
+    width: 70%!important;
+  }
+
+  .captcha{
+    margin-left:5%;
+  }
+
+  .invested_running, .return_running{
+    color: green !important;
+  }
+
+  .running{
+    font-size: 10px !important;
+    color: navy;
+  }
+  .sidenav{
+    width: 220px;
+    padding-left: 30px!important;
+  }
+.user-view{
+  margin-left:-30px!important;
+}
+
+  .menu_icon_side_nav{
+    color: navy!important;
+  }
+  .card-title{
+    font-weight: 400!important;
+    font-size: 18px!important;
+    padding: 10px!important;
+    font-family: 'Franklin Gothic Medium',sans-serif!important;
+    color: white;
+    width: 106.5%;
+    margin-left: -3%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    position: relative;
+    background-size: cover;
+    background-image: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+   }
+   .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity value as needed */
+  }
+
+
+  .notification_text{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0;
+    color: #333333;
+    background-color: #ffffff;
+    margin-top: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    opacity: .8;
+    color: red;
+    font-weight: 600;
+  }
+  .loader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .content {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.3);
+  }
+  
+
+
+.userId_section{
+padding: 10px;
+}
+
+
+.timer{
+    margin-top: -85px;
+    margin-right: 0px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer-display {
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    /* color: #333; */
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); */
+  }
+
+
+
+
+
+.avatar {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 2px white solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 9px!important;
+    background-image: url(https://www.shutterstock.com/image-vector/man-icon-vector-600w-1040084344.jpg);
+}
+
+.avatar_sidenav{
+    height: 120px;
+    width: 50px;
+    display: inline-block;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 2px white solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 9px!important;
+    background-image: url(https://www.shutterstock.com/image-vector/man-icon-vector-600w-1040084344.jpg);
+}
+
+body{
+    background-color: #f0f3f4;
+    /* background-image: url('https://img.freepik.com/free-vector/global-business-background-with-stock-chart-blue-tone_53876-117483.jpg?w=900&t=st=1685251084~exp=1685251684~hmac=8747f2cdbd9c37553ddfec0fe0092582170397c'); */
+    background-attachment: fixed;
+}
+
+
+.auctions_and_shares, .investments_and_earnings, .affiliate_and_earnings{
+   height: 175px;
+   
+}
+.graph_card{
+    height: 250px;
+}
+.bid_instructions_card{
+    height: 700px;
+}
+
+
+
+.auction_section{
+    margin-top: -30px;
+}
+
+.auction_amount_section{
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.auction_img{
+    width: 100px;
+    height: 80px;
+    margin-left: 0px;
+    margin-top: 7px;
+    margin-bottom: 4px;
+}
+
+.investment_img{
+  width: 100px;
+  height: 80px;
+  margin-left: -10px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.rupee_img{
+    width: 25px;
+    height: 25px;
+    margin-left: -20px;
+}
+
+
+.auction_amount{
+    font-weight: 600;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.auction_amount_input{
+    padding:10px;
+    margin-top: -70px;
+    position: relative;
+}
+
+.user_input_auction{
+    border: 1.3px solid rgba(0,0,0,.5)!important;
+    border-radius: 2px!important;
+    height: 35px!important;
+    width: 90px!important;
+    margin-left: -65px!important;
+    padding-left: 25px!important;
+    font-weight: 700;
+    font-size: 18px!important;
+}
+
+.bid_amount_err{
+    position: absolute;
+    margin-top: -38px;
+    margin-left: 35px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.bid_participation_err{
+    position: absolute;
+    margin-top: -70px;
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.place_bid{
+  margin-top: -1px!important;
+  height: 38px!important;
+}
+.rupee_img_user_input{
+    width: 20px;
+    height: 20px;
+    margin-left: -125px;
+    margin-top: 5px;
+}
+
+
+.investments_section{
+    margin-top: -25px;
+}
+
+.rupee_img_investment{
+    width: 13px;
+    height: 13px;
+}
+.investments_and_returns{
+    margin-top: 0px;
+}
+
+
+/* .total_return_section, .total_return{
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 40px;
+} */
+
+
+/* .total_investments_section{
+    margin-left: -35px!important;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.total_investments{
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+} */
+
+.total_return_container, .total_investment_container{
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  padding: 2px;
+  border-radius: 32px;
+  margin:5px;
+  background-color:#FDFDFD;
+}
+
+.total_downlines_container, .total_earnings_container, .withdrawn_amount_container, .available_amount_container{
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  padding: 4px;
+  margin:2px;
+  margin-top:0px;
+  background-color:#FDFDFD;
+  border-radius: 12px;
+}
+
+.total_downlines, .tatal_earnings, .withdrawn_amount, .available_amount{
+  font-weight: 600;
+  font-size: 15px;
+}
+.total_downlines_section, .total_earnings_section, .withdrawn_amount_section, .available_amount_section{
+  font-size: 10px;
+}
+.downlines_and_earnings{
+  margin-top:-20px;
+}
+
+.total_return, .total_investments{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.user_input_auction::placeholder {
+  color: #999; /* Placeholder text color */
+  font-style: italic;
+  font-size: 13px!important; /* Placeholder text style */
+}
+
+.downlines_img{
+    width: 80px;
+    height: 80px;
+    margin-left: -30px;
+    margin-top: -10px;
+}
+
+.downline_and_earning_container, .withdrawn_and_available_amount_container{
+  display:flex;
+}
+
+/* .total_downlines_section, .total_earnings_section, .withdrawn_amount_section{
+    font-weight: 600;
+    font-size: 13px;
+}
+.total_downlines, .tatal_earnings, .withdrawn_amount{
+    font-weight: 600;
+    margin-right: 40px !important;
+} */
+
+
+
+
+.bid_instruction_content{
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+    max-height: 190px;
+    overflow: scroll;
+    margin-top: -20px;
+    font-size: 17px;
+    line-height: 1.7em;
+}
+
+
+.ins{
+    margin-top: 20px;
+    font-size: 20px !important;
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .notification_icon{
+    margin-left: -30px;
+  }
+
+
+
+  .signin_section{
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 4px;
+
+  }
+
+.signin_title{
+    font-weight: bold !important;
+    font-size: 32px !important;
+}
+
+.google_signin_section, .facebook_signin_section{
+    width: 350px;
+    height: 50px;
+    border: 1px solid rgba(68, 68, 94, 0.3);
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.login_img{
+    width:100%;
+    height: 100%;
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 30px;
+}
+.login_text, .login_text_google{
+   font-size: 16px;
+   font-weight: 600;
+   opacity: .8;
+   margin-left: -60px;
+}
+
+.login_text_google{
+    margin-left: -80px;
+}
+
+
+.signin_phone, .signin_password{
+    border: 1.5px solid rgba(0,0,0,.3)!important;
+    border-radius: 4px!important;
+    max-width: 340px;
+}
+
+
+
+
+.logoutbutton{
+    display: inline;
+    margin-top: -20px;
+}
+
+
+.text{
+    margin-top: -50px;
+}
+
+
+footer{
+    bottom: 0!important;
+    position: relative;
+    width:100%;
+  }
+
+input{
+    padding-left: 5px!important;
+}
+
+
+
+
+
+
+
+
+/* Profile Styling */
+
+#profile{
+    min-height: 650px;
+}
+
+.loggedInProfile{
+    margin-bottom: 50px;
+    min-height: 500px;
+}
+.profile_section{
+    margin-top: 20px;
+}
+
+
+.profile_photo{
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px white solid;
+    background-image: url(https://lh3.googleusercontent.com/a/AGNmyxZfiNg_cHPjsIXX1GuO69ohCIMs4wWIbveh9F27=s96-c);
+}
+.person_profile_photo{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px white solid;
+    background-image: url(https://lh3.googleusercontent.com/a/AGNmyxZfiNg_cHPjsIXX1GuO69ohCIMs4wWIbveh9F27=s96-c);
+}
+
+
+.user_details_section{
+    position: relative;
+
+}
+.user_id_label, .user_name_label, .phone_number_label{
+  font-weight: 700;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  opacity: .8;
+}
+
+.user_id_label{
+    margin-right: 27px;
+}
+.user_name_label{
+    margin-right: 6px;
+}
+
+.phone_number_label{
+    margin-right: 10px;
+}
+.user_id, .user_name, .phone_number{
+    margin-right: 10px;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    opacity: .7;
+  }
+
+
+.edit_profile_button{
+    font-size: 10px;
+    padding: 5px 20px 5px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border:1px solid rgba(0, 0, 0, 0.1);
+}
+.tab_text{
+    font-size: 10px!important;
+    color: black!important;
+    font-weight: 600;
+    text-transform: lowercase;
+    opacity: .8;
+}
+
+
+.person_profile_section{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+
+.person_user_id_label, .person_user_phone_label, .person_user_total_downlines_label{
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.person_user_id_label{
+    margin-right: 25px;
+}
+
+.person_user_phone_label{
+    margin-right: 10px;
+
+}
+
+.person_user_total_downlines_label{
+    margin-right: 10px;
+}
+
+
+
+
+.person_user_id, .person_user_phone, .person_user_total_downlines{
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+
+.upline_status{
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+
+
+
+
+/* Dashboard Styling Section */
+.loggedInDashboard{
+    margin-bottom: 50px;
+}
+
+.pending_bid_section, .invested_bid_section{
+    font-size: 10px;
+    padding: 10px;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 4px;;
+}
+.status_pending_sucess{
+    color: white;
+    padding: 2px 5px 2px 5px;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 10px;
+}
+
+.bid_action_upload, .bid_action_download, .bid_action_edit{
+   font-size: 12px;
+   display: inline;
+}
+
+.bid_action_upload_icon{
+    margin-top: -20px;
+ }
+.bid_action_edit_icon{
+    font-size: 15px;
+    margin-top: -15px;
+}
+.bid_amount{
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2px 10px 2px 10px;
+    border-radius: 4px;
+    background-color: #F8F0E3;
+}
+
+.return_bid_section{
+    font-size: 10px;
+    padding: 10px;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 4px;;
+}
+.verifiy_received_amount_section{
+    font-size: 11px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.btn-small{
+    font-size:10px;
+    height:30px;
+    margin-top:-5px
+}
+
+.invested_bid_title, .return_bid_title, .bid_history_title{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.user_bid_invested_card, .user_bid_return_card{
+    min-height: 150px !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bid_container{
+    padding: 20px;
+}
+
+@media (min-width: 1000px) {
+    
+    /* CSS code for styles that apply only to screen sizes greater than 1000 pixels */
+    
+    .account_profile_container{
+        padding-right: 170px;
+    }
+    
+
+
+    .first_logo{
+        padding-left: 190px!important;
+    }
+  }
+
+
+  
+
+  .line_break{
+    margin-top: 10px;
+    
+  }
+  @media (max-width: 800px) {
+    /* CSS code for styles that apply only to screen sizes less than 800 pixels */
+    
+    .signin_section{
+        margin-top: 20px;
+        padding: 10px;
+        min-height: 450px;
+    
+      }
+    .signin_title{
+        font-weight: bold !important;
+        font-size: 25px !important;
+    }
+    
+    .google_signin_section, .facebook_signin_section{
+        width: 250px;
+        height: 50px;
+        border: 1px solid rgba(68, 68, 94, 0.3);
+        padding: 10px;
+        margin: 20px auto;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+   
+    
+    .login_img{
+        width:100%;
+        height: 100%;
+        max-width: 25px;
+        max-height: 25px;
+        margin-right: 20px;
+    }
+    .login_text, .login_text_google{
+        font-size: 16px;
+        font-weight: 600;
+        opacity: .8;
+        margin-left: 5px;
+     }
+     
+    .login_text_google{
+        margin-left: -20px;
+    }
+    .signin_phone, .signin_password{
+        border: 1.5px solid rgba(0,0,0,.3)!important;
+        border-radius: 4px!important;
+        max-width: 250px;
+    }
+  }
+
+
+
+
+  /* Set font properties */
+.terms_conditions{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0;
+    color: #333333;
+    background-color: #ffffff;
+    margin-top: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    opacity: .8;
+  }
+  .link_share_card{
+    padding: 10px!important;
+    padding-bottom: 40px;
+    background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    height: 150px;
+  }
+  .copy-link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px 5px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: navy;
+    background-color: grey;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .cp{
+    font-size: 10px;
+  }
+  
+  .copy-link-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .copy-link-btn:focus {
+    outline: none;
+  }
+  
+  .copy-link-btn.copied {
+    background-color: #2196f3;
+  }
+  
+  .indicator {
+    width: 50%!important;
+    background-color: green !important;
+  }
+  
+
+
+  .input-container {
+    position: relative;
+  }
+
+  .input-prefix {
+    transform: translateY(-50%);
+    color: #555;
+    margin-left: -36%;
+    top: 50%;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .input-field-mobile {
+    padding-left: 45px !important; /* Adjust the padding to accommodate the prefix width */
+  }
+
+  .link {
+    margin-left: -30px;
+    color: red;
+   }
+
+   .cutdown_timer_for_bids{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+   }
+
+   .number{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 4px;
+    background-color: green;
+    border-color: green;
+    color: white;
+    font-size: 10px;
+   }
+
+   .payment_number{
+    font-weight: 600;
+   }
+
+   .upi_img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: -28px;
+    margin-right:0px;
+   }
+
+   .update_payment_number_section{
+    margin-top: -50px;
+   }
+
+   .edit_payment_number{
+    display: inline-block;
+      vertical-align: bottom;
+      line-height: normal;
+      font-size: smaller;
+      color: gray;
+   }
+
+   .telegram_image{
+    width: 40px;
+    height: 40px;
+   }
+
+   .group_image{
+    width: 170px;
+    height: 45px;
+   }
+   .badge{
+    position: fixed!important;
+    margin-left: -10px!important;
+    margin-top: 38px !important;
+   }
+
+
+
+
+
+   body {
+    background: #e4ebf4;
+  }
+  h1 {
+    font-family: sans-serif;
+  }
+  .olcards,
+  .olcards * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .olcards {
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    --cardsGap: 1rem;
+    gap: var(--cardsGap);
+    padding-bottom: var(--cardsGap);
+  }
+  .olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
+  }
+  
+  .olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+  }
+  
+  .olcards li .content {
+    background-color: var(--cardColor);
+    --inlinePadding: 1em;
+    --boxPadding: 0.5em;
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+      var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    grid-template-areas:
+      "icon title"
+      "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--arrowClipSize)) 0,
+      100% 50%,
+      calc(100% - var(--arrowClipSize)) 100%,
+      calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+      0 calc(100% + var(--cardsGap))
+    );
+    position: relative;
+  }
+  .olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+  }
+  .olcards li .content::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+  }
+  .olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
+  }
+  .olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+    /* font-weight: 700; */
+  }
+  .olcards li .content .text {
+    grid-area: text;
+  }
+  

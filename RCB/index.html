@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="visa_card_style.css">
+
+  <title>RCB</title>
+
+<body>
+
+
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper white">
+        <a href="#!" class="brand-logo hide-on-med-and-down first_logo"><img src="src/images/rcb-logo.png"
+            style="width: 110px; height: 64px;"><img src="src/images/rcb-logo.jpeg"
+            style="width: 110px; height: 64px;"></a>
+        <a href="#!" class="brand-logo hide-on-large-only"><img src="src/images/rcb_logo_2.jpeg"
+            style="width: 90px; height: 56px;"></a>
+
+        <ul class="account_profile_container loggedIn" style="display: none;">
+          <li class="right tab_container">
+            <a href="#" class="black-text right " data-target="account-dropdown"><span class="avatar "
+                id="account-profile" style="margin-top: 15px;"></span> </a>
+            <a  class=" black-text notification_icon modal-trigger" href="#telegram_group"> <span class="new badge red" data-badge-caption="new"></span><i class="material-icons black-text menu_icon_side_nav">notifications</i></a>
+          </li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger loggedIn"><i class="material-icons black-text menu_icon_side_nav">menu</i></a>
+    </nav>
+  </div>
+
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+      </div>
+      <a href="#user"  class="avatar_sidenav"><img src=""/></a>
+      <a href="#name"><span class="white-text name " id="rcb-id">John Doe</span></a>
+      <a href="#email"><span class="white-text email" id="user-email-id">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li class="Home home_button menu_icon_side_nav sidenav-close" id="home-button">
+      <span class="icon"><i class="material-icons">home</i></span>
+      <span class="text">Home</span>
+    </li>
+    <li class="Dashboard _invested dashboard_button menu_icon_side_nav sidenav-close" id="dashboard-button">
+      <span class="icon"><i class="material-icons">dashboard</i></span>
+      <span class="text">Invested Bids Running</span>
+    </li>
+    <li class="Dashboard _return dashboard_button menu_icon_side_nav sidenav-close" id="dashboard-button">
+      <span class="icon"><i class="material-icons">dashboard</i></span>
+      <span class="text">Return Bids Running</span>
+    </li>
+    <li class="Dashboard dashboard_button menu_icon_side_nav sidenav-close" id="dashboard-button">
+      <span class="icon"><i class="material-icons">dashboard</i></span>
+      <span class="text">All Bids Record</span>
+    </li>
+    <li class="Profile profile_button menu_icon_side_nav sidenav-close" id="profile-button">
+      <span class="icon"><i class="material-icons">group_add</i></span>
+      <span class="text">Profile</span>
+    </li>
+    <li class="logoutbutton logout_button menu_icon_side_nav sidenav-close" id="logout-button">
+      <span class="icon"><i class="material-icons">person_pin</i></span>
+      <span class="text">Logout</span>
+    </li>
+  </ul>
+
+
+
+  <!-- Modal Structure -->
+  <div id="telegram_group" class="modal white">
+    <div id="group-link"></div>
+  </div>
+
+
+
+  <!-- side Account Model -->
+  <ul id='account-dropdown' class='dropdown-content account_dropdown'>
+    <!-- <span class="userId_section  black-text ">RCB469304</span> -->
+    <li class="Home home_button" id="home-button">
+      <span class="icon center"><i class="material-icons">home</i></span>
+      <span class="text center">Home</span>
+    </li>
+    <li class="Dashboard dashboard_button" id="dashboard-button">
+      <span class="icon center"><i class="material-icons">dashboard</i></span>
+      <span class="text center">Dashboard</span>
+    </li>
+    <li class="Profile profile_button" id="profile-button">
+      <span class="icon center"><i class="material-icons">group_add</i></span>
+      <span class="text center">Profile</span>
+    </li>
+    <li class="logoutbutton logout_button" id="logout-button">
+      <span class="icon center"><i class="material-icons">person_pin</i></span>
+      <span class="text center">Logout</span>
+    </li>
+  </ul>
+
+
+
+
+
+
+  <!-- Fixed Button At Right Bottom -->
+  <div class="fixed-action-btn loggedIn" style="display: none;">
+    <a class="btn-floating btn red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li id="home-button-bottom-fixed" class="home_button"><a class="btn-floating red"><i class="material-icons">home</i></a></li>
+      <li id="dashboard-button-bottom-fixed" class="dashboard_button"><a class="btn-floating yellow darken-1"><i class="material-icons">dashboard</i></a></li>
+      <li id="profile-button-bottom-fixed" class="profile_button"><a class="btn-floating green"><i class="material-icons">group_add</i></a></li>
+      <li id="logout-button-bottom-fixed" class="logout_button"><a class="btn-floating blue logout_button" id="logout-button-bottom"><i
+            class="material-icons">person_pin</i></a></li>
+    </ul>
+  </div>
+
+
+
+
+  <div class="container loggedOut" id="signin-container" style="display: none;">
+    <div class="signin_section row white center">
+      <div class="signin_title">
+        <span class="title">Welcome back</span>
+      </div>
+
+      <form class="email_password_signin_section" id="signin-form">
+        <div class="input-field">
+          <input type="text" id="signin-phone" name="signin_phone" class="signin_phone" placeholder="Enter Mobile Number" value=""
+            required />
+        </div>
+
+          <div class="container captcha">
+             <div id="recaptcha-container"></div>
+          </div>
+          <p id="mobile-verify-error-container" class="red-text col s12" style="display:none;"></p><br>
+
+          <div id="verify-otp-container" style="display:none">
+            <input type="text" class="otp_input" name="otp_number" placeholder="Enter OTP Sent To Provided Number"><br>
+            <button class="save_profile_changes btn-small green center center" id="signin-button">Login</button>
+          </div>
+
+        <p class="errmsg" id="err-msg" style="color: red;"></p>
+      </form>
+
+
+
+    
+
+  
+      <div class="line_break">OR</div>
+      <div class="google_signin_section">
+        <span class="google_signin_button " id="google-signin-button">
+          <span class="left"><img src="https://tse4.mm.bing.net/th?id=OIP.nOdVnfb98-Y9V_2qDP7yswHaHa&pid=Api&P=0"
+              class="login_img"></span>
+          <span class="login_text_google">Continue with Google</span>
+        </span>
+      </div>
+
+      <div class="facebook_signin_section">
+        <span class="facebook_login_button">
+          <span class="left"><img src="https://tse2.mm.bing.net/th?id=OIP.b_IiMhsmqpW9x2aEeMKztwAAAA&pid=Api&P=0"
+              class="login_img"></span>
+          <span class="login_text_google">Continue with Facebook</span>
+        </span>
+      </div>
+      <!-- Modal Trigger -->
+         <a class="waves-effect waves-light  modal-trigger right" href="#modal1">Terms & Conditions</a>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Terms & Conditions</h4>
+      <p class="terms_conditions">
+        1.Volatility: Stock market investments come with inherent risks due to market volatility. The terms and conditions may outline that the value of investments can fluctuate, and there is no guarantee of returns. Investors should be aware that they may experience gains or losses.<br>
+        2.Market Risk: The terms and conditions often state that investing in the stock market involves market risks beyond the control of the investor. Economic, political, and other external factors can impact stock prices and investment returns.<br>
+        3.Diversification: The terms and conditions may emphasize the importance of diversifying investment portfolios. It is generally recommended to spread investments across different asset classes and sectors to reduce the impact of individual stock fluctuations.<br>
+        4.Past Performance: While historical performance data may be provided, the terms and conditions usually clarify that past performance is not indicative of future results. Investors should not solely rely on past performance to make investment decisions.<br>
+        5.Liquidity Risk: The terms and conditions might highlight the risk of insufficient liquidity in the stock market. It can be challenging to buy or sell certain stocks quickly, especially during periods of high volatility, which may affect the ability to execute trades at desired prices.<br>
+        6.Regulatory and Legal Risks: Stock market investments are subject to various regulations and laws. The terms and conditions may mention that changes in regulations or legal frameworks can impact investment returns and the overall market environment.<br>
+        7.Brokerage or Investment Firm Disclaimers: If you are using a brokerage or investment firm, their terms and conditions might include additional disclaimers regarding the services they provide. They may outline their responsibilities, limitations, and potential conflicts of interest.<br>
+        8.Investor Responsibilities: The terms and conditions often outline the responsibilities of the investor, such as conducting their own research, understanding the risks involved, and making investment decisions based on their own judgment or in consultation with a financial advisor.<br>
+        9.It is essential to carefully read and understand the terms and conditions provided by your specific brokerage, investment platform, or financial institution before making any investment decisions. It is also advisable to consult with a qualified financial advisor to ensure you have a comprehensive understanding of the risks associated with stock market investments.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Loader -->
+
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+
+
+
+  <div class="container loggedInHome" id="home" style="display: none;">
+    <div class="row">
+
+
+      <!-- card 01 -->
+      <div class="card auctions_and_shares col s12 m6 l4 ">
+        <div class="card-title">Auction & Shares</div>
+        <div class="card-content auction_section row">
+          <div class="auction_img_section col s4"><img class="auction_img" src="src/images/two.jpg" /></div>
+          <div class="auction_amount_section col s8 green-text">₹<span
+              class="auction_amount green-text" id="auction-amount">0</span></div>
+        </div>
+        <p class="green-text bid_participation_err center" id="bid-participation-err-msg"></p>
+        <form id="user-auction-amount" style="display: none;">
+         <div class="auction_amount_input row" id="auction-input-section">
+          <!-- <span class="input-prefix">₹</span> -->
+          <input type="text" name="user_auction_amount" class="user_input_auction col s3 left" placeholder="">
+          <button class="btn green col s5 right place_bid disabled" id="makemybid-button" style="display:none;">Make my Bid</button>
+         </div>
+        </form>
+        <div class="red-text bid_amount_err" id="bid_amount_error"></div>
+        <div class="timer center white" id="timer-section" style="display: none;">
+          <div class="timer-display green-text">
+            <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- card 02 -->
+      <div class="card investments_and_earnings  col s12 m6 l4">
+        <div class="card-title">Investments & Returns</div>
+        <div class="card-content investments_section row">
+          <div class="investments_img col s4"><img class="investment_img" src="src/images/three.jpg"></div>
+
+          <div class="investments_and_returns col s8">
+
+            <div class="total_return_container center">
+            <div class="total_return">
+              <span class="rupee_symbol">₹</span>
+              <spna class="" id="total-return">0</spna>
+             </div>
+             <div class="total_return_section">🪙Total Return</div>
+             </div>
+
+           <div class="total_investment_container center">
+            <div class="total_investments">
+              <span class="rupee_symbol">₹</span>
+              <spna class="" id="total-invested">0</spna>
+            </div>
+            <div class="total_investments_section">🪙Total Investments</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- card 03 -->
+      <div class="card affiliate_and_earnings  col s12 m6 l4">
+        <div class="card-title">Affiliate & Earnings</div>
+        <div class="card-content affiliate_and_earning row">
+          <div class="affiliate_img col s3"><img class="downlines_img" src="http://edmundrichtoh.com/wp-content/uploads/2013/11/From-Downline-Member-To-MLM-Leader-How-To-Make-The-Great-Shift2.jpg"></div>
+          <div class="downlines_and_earnings s9 center">
+
+            <div class="downline_and_earning_container">
+            <div class="total_downlines_container">
+              <span class="total_downlines" id="downlines">0</span><br>
+              <span class="total_downlines_section">Total Downlines</span>
+            </div>
+            
+            <div class="total_earnings_container">
+              <span class="rupee_symbol">₹</span>
+              <span class="tatal_earnings" id="total-earnings">0</span><br>
+              <span class="total_earnings_section">🏆Total Earnings</span>
+            </div>
+          </div>
+
+          <div class="withdrawn_and_available_amount_container">
+            <div class="withdrawn_amount_container">
+              <span class="rupee_symbol">₹</span>
+              <span class="withdrawn_amount" id="redeem-amount">0</span><br>
+              <span class="withdrawn_amount_section">Redeem Amount</span>
+            </div>
+            <div class="available_amount_container">
+              <span class="rupee_symbol">₹</span>
+              <span class="available_amount" id="available-amount">0</span><br>
+              <span class="available_amount_section">Available Amount</span>
+            </div>
+
+          </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!--  card 04 -->
+
+      <div class="card col s12 m12 l6 graph_card black white-text">
+        <canvas class="" id="myCanvas"></canvas>
+      </div>
+
+
+      <!-- card 05 -->
+
+      <div class="col s12 m12 l6 bid_instructions_card">
+        <h5 class="black-text"><b>Auction Instructions</b></h5>
+            <ol class="olcards">
+              <li style="--cardColor:#fc374e">
+                <div class="content">
+                  <div class="title">Minimum bid amount:₹500</div>
+                </div>
+              </li>
+
+              <li style="--cardColor:#36aeb3">
+                <div class="content">
+                  <div class="title"> Maximum bid amount: ₹2500</div>
+                </div>
+              </li>
+              <li style="--cardColor:#162d59">
+                <div class="content">
+                  <div class="title">Bidding time: 4 days</div>
+                </div>
+              </li>
+              <li style="--cardColor:#f15f0e">
+                <div class="content">
+                  <div class="icon">⏱️</div>
+                  <div class="title">First Auction:  10:00 AM <br> 
+                                     Second Auction: 07:00 PM </div>
+                </div>
+              </li>
+              <li style="--cardColor:lightgreen">
+                <div class="content">
+                  <div class="icon">⚠️</div>
+                  <div class="title">Note:</div>
+                  <div class="text">If you participate in an auction and do not intend to pay the bid amount, your account will be suspended.
+                  </div>
+                </div>
+              </li>
+            </ol>
+
+      </div><br>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Profile Sections -->
+
+
+  <div class="container loggedInProfile white" style=" display:none;" id="profile">
+    <div class="profile_section row ">
+      <div id="profile-viewer-container"></div>
+
+      <div class="profile_update_input container" style="display: none;" id="update-profile-container">
+
+      
+      </div><br>
+
+      <div class="edit_profile_button_section col s10 right">
+        <a class="edit_profile_button red  white-text" id="update-profile-button"  style="display: none;">Update Mobile Number</a>
+      </div>
+
+    </div>
+
+    <div class="update_payment_number_section container" id="update-payment-number-section" style="display:none;">
+        <div class="card-content">
+             <span class="payment_number">Payment Number:
+              <img src="https://images.news18.com/optimize/OIEKg_dFrdqOuNfRJwh6ctdpPQI=/534x300/images.news18.com/ibnlive/uploads/534x300/jpg/2020/02/UPI.jpg" class="upi_img"/>
+              <span class="number" id="paymentNumber-number"></span></span><br><br>
+              <span class="edit_payment_number right"><a href="#" id="update-payment-number-btn">update</a></span>   
+        </div>
+        <form id="update-payment-number-form" class="container" style="display:none;">
+            <div class="input-field">
+              <input type="text" name="payment_number" id="payment_number" placeholder="Enter payment number">
+              <button class="btn green right">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s4"><a class="tab_text active " href="#total-downlines">downlines</a></li>
+          <li class="tab col s4 "><a class="tab_text " href="#upline">Upline</a></li>
+        </ul>
+      </div>
+
+      <div id="total-downlines" class="col s12 ">
+        <div class="total_downlines_container">
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">group</i>Direct Downlines</div>
+              <div class="collapsible-body">
+                <div id="all-direct-downlines"></div>
+              </div>
+            </li>
+            <li>
+
+              <div class="collapsible-header"><i class="material-icons">group</i>Indirect Downlines</div>
+              <div class="collapsible-body">
+                <div id="all-indirect-downlines"></div>
+              </div>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+
+
+
+
+
+      <div id="upline" class="col s12 container ">
+
+        <div id="upline-update-section" style="display: none;">
+          <div class="center"><br>
+            <span class="note upline_status ">You Can Not Change Your Upline Later</span>
+          </div>
+          <div class="container">
+            <div class="row">
+              <form id="upline-data-form">
+              <div class="input-field">
+                <input type="text" name="upline_id_input" placholder="Enter Upline Id" id="upline-id-input"/>
+                <label for="upline-id-input">Upline Id</label>
+              </div>
+              <div id="upline-data">
+              </div>
+              <button class="btn-small green right " style="display:none" id="upline-id-maker-button">Make Upline Now!</button>
+            </form><br><br>
+             
+            </div>
+          </div>
+        </div>
+
+        <div id="person-profile-section"></div>
+
+      </div>
+
+    </div>
+
+   
+
+    <div class="link_share_section container" id="link-share-section" style="display:none">
+        <div class="card link_share_card">
+          <div class="link_share_card-title black-text">Profile Link</div>
+          <div class="card-content">
+            <div id="link-container"></div>
+            <a id="copy-link-btn" class="copy-link-btn right"><i class="material-icons cp">content_copy</i> copy</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="mobile_register_notification_section container" id="mobile-registration-notification-section" style="display:none">
+      <div class="card">
+        <div class="card-content">
+          <p class="notification_text">
+            Update Your Mobile Number To Activate Your Account
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    
+  </div>
+
+
+  <!-- Dashboard Section -->
+
+  <div class="loggedInDashboard container" style="display: none;" id="dashboard">
+    <div class="row dashboard">
+      <div class="user_bid_invested_card col s12 white" id="user-invested-bid-card">
+        <div>
+        <div class="cutdown_timer_for_bids center" id="cut-down-timer-bids" style="display:none;"></div>
+        </div>
+        <span class="bid_history_title">Current Running and Pending Bids</span>
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s6 tab_text"><a class="active" href="#current-invested-bids-container" id="invested_running"><span class="running">Invested Runnings</span></a></li>
+            <li class="tab col s6 tab_text"><a  href="#current-return-bids-container" id="return_running"><span class="running">Return Runnings</span></a></li>
+          </ul>
+         </div>
+        <div id="current-invested-bids-container" class="col s12">
+            <div id="user-current-invested-bids"></div>
+        </div>
+        <div id="current-return-bids-container" class="col s12">
+          <div id="user-current-return-bids"></div>  
+        </div>
+      </div>
+  
+      <div class="bid_history_card col s12 white">
+        <span class="bid_history_title">Bids History</span>
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header green-text"><i class="material-icons green-text">trending_up</i>Invested Bids Record</div>
+            <div class="collapsible-body">
+              <div id="user-record-invested-bids"></div>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header green-text"><i class="material-icons green-text">trending_down</i>Return Bids Record</div>
+            <div class="collapsible-body">
+              <div id="user-record-return-bids"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  
+
+<!-- FOOTER SECTION -->
+<footer class="page-footer white loggedIn" style="display: none;">
+  <div class="footer-copyright">
+    <div class="container center black-text"><b>© 2023 Copyright Rich Club of Bidding</div>
+  </div>
+</footer>
+
+    
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+
+
+
+    <script>
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      const firebaseConfig = {
+        apiKey: "AIzaSyAd0femuolQZLCgI0VWNz7dMT3Yx4bhbDQ",
+        authDomain: "rcbgrandauction.firebaseapp.com",
+        databaseURL: "https://rcbgrandauction-default-rtdb.firebaseio.com",
+        projectId: "rcbgrandauction",
+        storageBucket: "rcbgrandauction.appspot.com",
+        messagingSenderId: "118489529878",
+        appId: "1:118489529878:web:b5db0303c845879641bf37"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const database = firebase.database();
+      var storageRef = firebase.storage().ref();
+    </script>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+    <script type="module" src="index.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="timer.js"></script>
+    <script type="module" src="profile.js"></script>
+    <script type="module" src="pairing.js"></script>
+    <script type="module" src="user.js"></script>
+    <script type="module" src="Authentication/database.js"></script>
+    <script type="module" src="Authentication/chart_graph.js"></script>
+
+</body>
+
+
+
+
+</html>
